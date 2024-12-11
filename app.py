@@ -243,7 +243,7 @@ def main():
     db = get_firestore_client(credentials)
     web3 = Web3(Web3.HTTPProvider(HTTP_URL))
 
-    if not web3.isConnected():
+    if not web3.is_connected():
         print("Impossible de se connecter au réseau.")
         return
 
