@@ -199,12 +199,12 @@ def add_api_key(db, address, expiration_date):
 
 
 def listen_for_payments(web3, db, contract, payment_event):
-    last_checked_block = web3.eth.blockNumber
+    last_checked_block = web3.eth.block_number
     print("Écoute des paiements en cours...")
 
     while True:
         try:
-            current_block = web3.eth.blockNumber
+            current_block = web3.eth.block_number
             if current_block > last_checked_block:
                 logs = web3.eth.get_logs({
                     "fromBlock": last_checked_block + 1,
