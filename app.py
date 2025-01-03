@@ -223,7 +223,7 @@ def listen_for_payments(web3, db, contract, payment_event):
                         amount = decoded_event['args']['amount']
                         expiration_date = decoded_event['args']['newExpirationDate']
                         print(f"Paiement reçu de {user_address} pour {amount}, expiration : {expiration_date}")
-                        add_api_key(db, user_address, expiration_date)
+                        add_api_key(db, user_address.lower(), expiration_date)
                     except Exception as e:
                         print(f"Erreur lors du décodage de l'événement : {e}")
 
