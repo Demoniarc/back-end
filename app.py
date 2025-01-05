@@ -1,10 +1,12 @@
 import json
 import secrets
+import os
 import time
 from google.cloud import firestore
 from google.oauth2 import service_account
 from web3 import Web3
 from web3._utils.events import get_event_data
+
 
 
 # === Configuration ===
