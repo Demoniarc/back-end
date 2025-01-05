@@ -9,7 +9,7 @@ from web3._utils.events import get_event_data
 
 # === Configuration ===
 JSON_FILE_PATH = "/etc/secrets/tranquil-lore-396810-a584b05b6b14.json"
-HTTP_URL = "https://polygon-mainnet.infura.io/v3/babbbe0036bb474dad1536505b7ebb14"
+HTTP_URL = os.getenv('HTTP_URL')
 CONTRACT_ADDRESS = "0xcbD7cDEBC30E2673925304199b4c7545dafA425E"
 POLLING_INTERVAL = 10
 
